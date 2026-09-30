@@ -14,20 +14,14 @@ conn.execute(
 )
 conn.execute(
     """
+    CREATE TABLE IF NOT EXISTS estudiantes(
     id INTEGER PRIMARY KEY,
     nombre TEXT NOT NULL,
     apellidos TEXT NOT NULL,
     fecha_nacimiento DATE NOT NULL
+    )
+    
     """
     )
 
-
-conn.execute(
-    """
-    INSERT INTO cursos (descripcion,horas)
-    VALUES('pithon de 0 a experto',40)
-
-    """
-)
-
-conn.commit()
+cursor = conn.
